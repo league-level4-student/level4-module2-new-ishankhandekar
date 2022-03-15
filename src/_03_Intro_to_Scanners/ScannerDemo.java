@@ -11,6 +11,9 @@ public class ScannerDemo {
      */
 
     public static void main(String[] args) {
+    	String name;
+    	int age;
+    	boolean adultOrNot;
         /*
          * 1. Create an object of the Scanner class.
          * 
@@ -24,7 +27,7 @@ public class ScannerDemo {
          * Eclipse's console. This may change depending on the environment where
          * are running your program or the input/output stream you are using.
          */
-
+    	Scanner scan = new Scanner(System.in);
         
         
         /*
@@ -41,7 +44,8 @@ public class ScannerDemo {
          * Note: Don't forget to save the results of next() or nextLine() into a
          * String variable.
          */
-
+    	System.out.println("What is your name?");
+    	name = scan.nextLine();
         
         
         /*
@@ -51,7 +55,8 @@ public class ScannerDemo {
          * See if you can find the scanner method that does this without relying
          * on Integer.parseInt().
          */
-
+    	System.out.println("What is your age?");
+    	age = scan.nextInt();
         
         
         /*
@@ -61,10 +66,16 @@ public class ScannerDemo {
          * Note: There are many methods similar to the one you used for int that
          * are capable of taking in primitive data types.
          */
-
+    	System.out.println("You are an adult (answer in true or false)");
+    	adultOrNot = scan.hasNextBoolean();
         // 5.) Print the user's data to the console nicely formatted.
-
-        
+    	System.out.println("Your name is " + name);
+    	System.out.println("You are " + age + " years old");
+        if (adultOrNot) {
+			System.out.println("You are an alult");
+		}else {
+			System.out.println("You are not an adult");
+		}
         
         /*
          * 6.) Close your scanner to avoid memory leaks.

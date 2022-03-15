@@ -1,4 +1,6 @@
-package _06_Console_Store;
+package _02_Generics_Store;
+
+import java.util.Scanner;
 
 public class ConsoleStore {
 
@@ -37,7 +39,33 @@ public class ConsoleStore {
      */
 
     public static void main(String[] args) {
+    	int money = 50;
+    	Cart userCart = new Cart();
+    	Scanner scan = new Scanner(System.in);
+    	System.out.println("Welcome to the console store! "
+    			+ "You have $50 to buy whatever you want. We have cereal($10), clothing($15), candy($5), and toys($17)");
+    	String again;
+    	do {
+    		System.out.println("What do you want to buy.");
+    		String userItem = scan.nextLine();
+    		if (userItem.equals("cereal")) {
+				if (money >= 10) {
+					
+				} else {
 
+				}
+			}else if (userItem.equals("clothing")) {
+				
+			}else if (userItem.equals("candy")) {
+				
+			} else if (userItem.equals("toys")) {
+
+			}
+            System.out.print("Would you like to buy something (y/n)? ");
+        	again = scan.next();
+		} while (again.equals("y") );  
+    	
+    	
     }
 
 }
